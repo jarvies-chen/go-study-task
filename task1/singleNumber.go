@@ -1,7 +1,9 @@
-package task1
+package main
+
+import "fmt"
 
 // 136. 只出现一次的数字
-func SingleNumber(nums []int) int {
+func singleNumber(nums []int) int {
 	tempMap := make(map[int]int) //key是数组中的数字，value是出现的次数
 	for _, value := range nums {
 		tempMap[value]++
@@ -14,4 +16,10 @@ func SingleNumber(nums []int) int {
 		}
 	}
 	return 0
+}
+
+func main() {
+	nums := []int{1, 1, 3, 2, 3}
+	singleNumber := singleNumber(nums)
+	fmt.Println("Single Number is ", singleNumber)
 }

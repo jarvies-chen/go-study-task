@@ -1,6 +1,8 @@
-package task1
+package main
 
-func RemoveDuplicates(sortedArr []int) int {
+import "fmt"
+
+func removeDuplicates(sortedArr []int) int {
 	if len(sortedArr) == 0 {
 		return 0
 	}
@@ -12,4 +14,10 @@ func RemoveDuplicates(sortedArr []int) int {
 		}
 	}
 	return slowPointer
+}
+
+func main() {
+	sortedArr := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
+	length := removeDuplicates(sortedArr)
+	fmt.Println(sortedArr, "length of duplicated arr is ", length)
 }

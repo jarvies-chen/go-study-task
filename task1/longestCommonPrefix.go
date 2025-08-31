@@ -1,6 +1,8 @@
-package task1
+package main
 
-func LongestCommonPrefix(arr []string) string {
+import "fmt"
+
+func longestCommonPrefix(arr []string) string {
 	if len(arr) == 0 {
 		return ""
 	}
@@ -18,4 +20,10 @@ func LongestCommonPrefix(arr []string) string {
 		}
 	}
 	return prefix
+}
+
+func main() {
+	arr := []string{"flower", "flow", "flight"}
+	prefix := longestCommonPrefix(arr)
+	fmt.Println("longest common prefix is ", prefix)
 }

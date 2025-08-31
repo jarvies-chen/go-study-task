@@ -1,13 +1,16 @@
-package task1
+package main
 
-import "sort"
+import (
+	"fmt"
+	"sort"
+)
 
 type Interval struct {
 	Start int
 	End   int
 }
 
-func MergeIntervals(intervals []Interval) []Interval {
+func mergeIntervals(intervals []Interval) []Interval {
 	if len(intervals) == 0 {
 		return nil
 	}
@@ -31,4 +34,10 @@ func MergeIntervals(intervals []Interval) []Interval {
 	}
 	result = append(result, current)
 	return result
+}
+
+func main() {
+	intervals := []Interval{{1, 3}, {2, 6}, {8, 10}, {15, 18}}
+	result1 := mergeIntervals(intervals)
+	fmt.Println("Merged intervals is ", result1)
 }

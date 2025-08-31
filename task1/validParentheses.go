@@ -1,6 +1,8 @@
-package task1
+package main
 
-func IsValidParentheses(str string) bool {
+import "fmt"
+
+func isValidParentheses(str string) bool {
 	stack := make([]byte, 0, len(str)) //初始化栈，只保存左括号
 
 	for i := 0; i < len(str); i++ {
@@ -37,4 +39,10 @@ func matchParentheses(stack *[]byte, expectParentheses byte) bool {
 	}
 	*stack = (*stack)[:len(*stack)-1] //右括号与栈顶的左括号匹配，移除栈顶左括号
 	return true
+}
+
+func main() {
+	parentheses := "()[]{}"
+	isParentheses := isValidParentheses(parentheses)
+	fmt.Println(parentheses, "is valid parentheses? ", isParentheses)
 }

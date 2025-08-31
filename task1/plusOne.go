@@ -1,6 +1,8 @@
-package task1
+package main
 
-func PlusOne(intArr []int) []int {
+import "fmt"
+
+func plusOne(intArr []int) []int {
 	if len(intArr) == 0 {
 		return intArr
 	}
@@ -17,4 +19,10 @@ func PlusOne(intArr []int) []int {
 
 	//所有位都进一
 	return append([]int{1}, intArr...)
+}
+
+func main() {
+	intArr := []int{4, 3, 2, 9}
+	result := plusOne(intArr)
+	fmt.Println("plus one result ", result)
 }
