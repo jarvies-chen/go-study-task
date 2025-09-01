@@ -1,3 +1,6 @@
+// 两数之和
+// 考察：数组遍历、map使用
+// 题目：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数
 package main
 
 import "fmt"
