@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+database:
+  driver: sqlite
+  source: blog.db
+
+jwt:
+  secretKey: "SecretKey"
+  expire: 24h
